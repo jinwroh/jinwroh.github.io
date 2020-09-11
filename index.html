@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Jin W. Roh</title>
+
+    	<meta name="description" content="The design and development practice of Jin W. Roh. Software Engineer & UI/UX Designer.">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    	<link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+
+    	<script src="javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    	<script src="javascripts/jquery.visible.min.js" type="text/javascript"></script>
+    	<script src="javascripts/jquery.easing.1.3.js" type="text/javascript"></script>
+    	<script src="javascripts/smoothscroll.js" type="text/javascript"></script>
+    	<script src="javascripts/script.js" type="text/javascript"></script>
+	</head>
+	
+
+	<body style="overflow-x: hidden; overflow-y: scroll; position: fixed;">
+
+		<style>
+			#spinner {
+			  margin: 20px auto;
+			  width: 70px;
+			  text-align: center;
+			}
+
+			#spinner > div {
+			  width: 18px;
+			  height: 18px;
+			  background-color: #333;
+
+			  border-radius: 100%;
+			  display: inline-block;
+			  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			  animation: bouncedelay 1.4s infinite ease-in-out;
+			  /* Prevent first frame from flickering when animation starts */
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+
+			#spinner .bounce1 {
+			  -webkit-animation-delay: -0.32s;
+			  animation-delay: -0.32s;
+			}
+
+			#spinner .bounce2 {
+			  -webkit-animation-delay: -0.16s;
+			  animation-delay: -0.16s;
+			}
+
+			@-webkit-keyframes bouncedelay {
+			  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+			  40% { -webkit-transform: scale(1.0) }
+			}
+
+			@keyframes bouncedelay {
+			  0%, 80%, 100% { 
+			    transform: scale(0.0);
+			    -webkit-transform: scale(0.0);
+			  } 40% { 
+			    transform: scale(1.0);
+			    -webkit-transform: scale(1.0);
+			  }
+			}
+		</style>
+
+		<div id="initial" style="
+			height: 100%;
+			position: relative;
+			z-index: 500;
+			background-color: white;
+			">
+			<div style="height: 50%;"></div>
+			<div style="
+				position: relative;
+				top: -135px;
+			">
+				<img id="initial-logo" src="images/logo.svg" style="
+				    margin: auto;
+					display: block;
+					width: 150px;
+				">
+				<div id="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				  <!--<p style="font-family: Lato-Light;"> Loading...<p>-->
+				</div>
+			</div>
+		</div>
+
+		<div id="all-container" style="visibility: hidden;">
+
+			<div id="background-image-container">
+			</div>
+
+			<div id="navigation-bar">
+				<img id="personal-logo" src="images/logo.svg" />
+				<nav id="navigation-bar-links" class="cl-effect-13">
+					<a id="homelink" href="#" class="linkactive">Home</a>
+					<a id="projectlink" href="#">Projects</a>
+					<a id="aboutlink" href="#">About</a>
+					<a id="contactlink" href="#">Contact</a>
+				</nav>
+				<img id="navigation-bar-links-mobile" src="images/mobile-menu.svg">
+				<div id="navigation-bar-overlay"></div>
+			</div>
+
+			<div id="mobile-navigation-bar">
+				<a id="mhomelink">
+					<div>Home</div>
+				</a>
+				<a id="mprojectlink">
+					<div>Projects</div>
+				</a>
+				<a id="maboutlink">
+					<div>About</div>
+				</a>
+				<a id="mcontactlink">
+					<div>Contact</div>
+				</a>
+			</div>
+
+			<div id="main">
+				<div id="main-first">
+				</div>
+				<div id="main-second">
+				</div>
+				<div id="greeting">
+					<span id="name-first">JIN W.</span> <span id="name-last">ROH</span>
+					<img id="greeting-line" src="images/hline.png">
+					<span id="intro-one">Software Engineer</span>
+					<span id="ampersand" class="transition">&</span>
+					<span id="intro-two" class="transition">UI&#8901;UX Designer</span>
+				</div>
+				<img id="hiim" class="transition" src="images/hiim.png" />
+				<img id="bang" class="transition" src="images/exclamation.png" />
+			</div>
+
+			<div id="projects">
+				<p class="sub-title">
+					<img src="images/hlinedark.png">
+					<span>PROJECTS</span>
+					<img src="images/hlinedark.png">
+				</p>
+
+				<p class="sub-sub-title">
+					<span>Personal & Independent Projects</span>
+				</p>
+
+				<div id="project-bullet">
+					<div class="p-container p-container-flex-reverse" >
+						<div class="p-img-container-b animate animate-pre-hidden from-right">
+							<img class="p-img-b" src="images/preview_bullet.png">
+						</div>
+						<div class="p-contents-b animate animate-pre-hidden from-left">
+							<img id="p-icon-bullet" src="images/icon_bullet.svg"/>
+							<p class="p-title">Bullet Diary</p>
+							<p class="p-role" >iOS (iPhone) Development & UI/UX Design</p>
+							<p class="p-tech">
+								<span>Objective-C</span>
+								<span>Illustrator (Ai)</span>
+								<span>Photoshop (Ps)</span>
+							</p>
+								<p class="p-desc">Bullet Diary is a minimalistic, yet practical journaling iPhone application designed to provide a pleasant and effortless experience writing journal entries. Each entry is composed of up to three bullet points that encapsulate key highlights of the day.</p>
+								<div class="appstore-link-container">
+									<p class="p-bullet-extra">This application is now live in the iOS App Store - take a look!</p>
+									<a class="bullet-dlapp" target="_blank" href="https://itunes.apple.com/us/app/bullet-diary/id923819991">
+										<img src="images/iosappstore.svg">
+									</a>
+								</div>
+								<div class="p-button">
+									<a class="p-button-link" target="_blank" href="./projects/bulletdiary.html">
+									Project Details
+									</a>
+								</div>
+						</div>
+						<br style="clear:both;" />
+					</div>
+				</div>
+
+				<div id="project-pico">
+					<div class="p-container p-container-flex">
+						<div class="p-img-container-a p-img-right-padding animate animate-pre-hidden from-left">
+							<img class="p-img-a" src="images/preview_picomark3.png">
+						</div>
+						<div class="p-contents-a animate animate-pre-hidden from-right">
+							<img id="p-icon-pico" src="images/logo_picomark.svg"/>
+							<p class="p-title">Picomark</p>
+							<p class="p-role">Full Stack Development & UI/UX Design</p>
+							<p class="p-tech">
+								<span>Angular.js</span>
+								<span>Ruby on Rails</span>
+								<span>Sketch</span>
+							</p>
+							<p class="p-desc">Picomark is collaboration tool to help freelance designers and their respective clients. Freelancers can upload and organize their designs, and then invite clients to share, present, to gather feedback. Real-time collaboration tools such as live drawing and commenting on the design, as well as a chat features are supported.
+							<br /><br />
+							This project is still under active development (with daily pushes), but I've made considerable progress. Take a peek at
+							<a class="project-link" target="_blank" href="http://www.picomark.com">www.picomark.com</a>!
+							</p>
+							<div class="p-button">
+								<a target="_blank" class="p-button-link" href="./projects/picomark.html">
+								Project Details
+								</a>
+							</div>
+						</div>
+						<br style="clear:both;" />
+					</div>
+				</div>
+
+				<div id="project-rest">
+					<div class="p-container p-container-flex-reverse">
+						<div class="p-img-container-b animate animate-pre-hidden from-right">
+							<img class="p-img-b" src="images/fourWhite3.png">
+						</div>
+						<div class="p-contents-b animate animate-pre-hidden from-left">
+							<img id="p-icon-rest" src="images/icon_rest.png"/>
+							<p class="p-title">Restaurant Spin</p>
+							<p class="p-role" >iOS (iPhone) Development & UI/UX Design</p>
+							<p class="p-tech">
+								<span>Swift 2.0</span>
+								<span>Illustrator (Ai)</span>
+								<span>Photoshop (Ps)</span>
+							</p>
+							<p class="p-desc">Restaurant Spin a nifty iPhone application to help users find new restaurants. The application randomly suggests a nearby place to eat according to the number of filters set by the user; the results are searched using the Yelp and Google Places Search API. Filters include price range, average customer rating, search radius, and more!
+							</p>
+							<div class="appstore-link-container">
+								<p class="p-bullet-extra">This application is now live in the iOS App Store - why not give it a spin?</p>
+								<a class="bullet-dlapp" target="_blank" href="https://itunes.apple.com/us/app/restaurant-spin-random-restaurant/id1028963529">
+									<img src="images/iosappstore.svg">
+								</a>
+							</div>
+							<div class="p-button">
+								<a target="_blank" class="p-button-link" href="./projects/restaurantspin.html">
+								Project Details
+								</a>
+							</div>
+						</div>
+						<br style="clear:both;" />
+					</div>
+				</div>
+
+				<div id="project-snap">
+					<div class="p-container p-container-flex">
+						<div class="p-img-container-a p-img-right-padding animate animate-pre-hidden from-left">
+							<img class="p-img-a" src="images/five.png">
+						</div>
+						<div class="p-contents-a animate animate-pre-hidden from-right">
+							<img id="p-icon-snap" src="images/icon_snap.png"/>
+							<p class="p-title">Receipt Snap</p>
+							<p class="p-role" >iOS (iPhone) Development & UI/UX Design</p>
+							<p class="p-tech">
+								<span>Swift 2.0</span>
+								<span>Illustrator (Ai)</span>
+								<span>Photoshop (Ps)</span>
+							</p>
+							<p class="p-desc">ReceiptSnap is an iPhone application that helps users organize their receipts by taking pictures and saving them instead of managing physical copies. Users can save the photo with relevant tags and details to help categorize and identify for later use. Furthermore, the app can also generate reports that summarize data from a specified timeframe.
+							</p>
+							<div class="appstore-link-container">
+								<p class="p-bullet-extra">This application is now live in the iOS App Store!</p>
+								<a class="bullet-dlapp" target="_blank" href="https://itunes.apple.com/us/app/receipt-snap-easy-receipt/id1107907335">
+									<img src="images/iosappstore.svg">
+								</a>
+							</div>				
+							<div class="p-button">
+								<a target="_blank" class="p-button-link" href="./projects/receiptsnap.html">
+									Project Details
+								</a>
+							</div>
+						</div>
+						<br style="clear:both;" />
+					</div>
+				</div>
+
+				<div id="project-tour">
+					<div class="p-container p-container-flex-reverse">
+						<div class="p-img-container-b animate animate-pre-hidden from-right">
+							<img class="p-img-b" src="images/preview_tour.png">
+						</div>
+						<div class="p-contents-b animate animate-pre-hidden from-left">
+							<img id="p-icon-tour" src="images/icon_tour.svg"/>
+							<p class="p-title">TourPinch!</p>
+							<p class="p-role" >Full Stack Development & UI/UX Design</p>
+							<p class="p-tech">
+								<span>Node.js</span>
+								<span>Backbone.js</span>
+								<span>MySQL</span>
+								<span>AWS</span>
+								<span>Illustrator (Ai)</span>
+							</p>
+							<p class="p-desc">TourPinch! (<a class="project-link" target="_blank" href="http://tourpinch.com">www.tourpinch.com</a>) is a web application that provides a pre-selected, best itinerary for a given destination city to tourists depending on their 
+							length of stay. The application pinpoints the 'must-see' points and generates the most efficient tour route to 
+							help plan the user's travelling. The application is powered by Node.js and Backbone.js in the backend and frontend, respectively.</p>
+							<div class="p-button">
+								<a target="_blank" class="p-button-link" href="./projects/tourpinch.html">
+								Project Details
+								</a>
+							</div>
+						</div>
+						<br style="clear:both;" />
+					</div>
+				</div>
+			</div>
+
+			<div id="work">
+				<p class="sub-sub-title">
+					Current professional work - Mobile Software Engineer @Dialpad<br/>
+					<span class="sub-sub-sub-title">All apps are publicly available in the app store!</span>
+				</p>
+				<div id="prof-android-container">
+					<div id="uc-container" class="android-app-container animate animate-pre-hidden from-left">
+						<div id="uc-image-container">
+							<img class="android-image" src="images/uc-c.png"/>
+						</div>
+						<div class="gplay-badge-container">
+							<a href="https://play.google.com/store/apps/details?id=com.uberconference&hl=en" target="_blank">
+								<img class="gplay-badge" src="images/google-play-badge.png"/>
+							</a>
+						</div>
+						<div class="prof-app-title">UberConference</div>
+						<div class="prof-tech">Android Development</div>
+						<p class="prof-blurb">
+							UberConference is a web conferencing application that prides itself as the "Stress-free conference call" with no required PINs and real time participant updates (knowing who's talking, screensharing, etc).
+							<br><br>
+							The android application is an extension of the web app: the mobile app makes it easy to create instant calls with a click and schedule calls by simply selecting contacts and choosing a meeting time. Even features such as screensharing and chats are supported!
+						</p>
+					</div>
+					<div id="uv-container" class="android-app-container animate animate-pre-hidden from-right">
+						<div id="uv-image-container">
+							<img class="android-image" src="images/uv-c.png"/>
+						</div>
+						<div class="gplay-badge-container">
+							<a href="https://play.google.com/store/apps/details?id=co.switchapp&hl=en" target="_blank">
+								<img class="gplay-badge" src="images/google-play-badge.png"/>
+							</a>
+						</div>
+						<div class="prof-app-title">Dialpad</div>
+						<div class="prof-tech">Android Development</div>
+						<p class="prof-blurb">
+							Dialpad is (in fancy terms) "cloud-based, enterprise business phone solution". In non-fancy wording: Google Voice competitor. By signing up for Dialpad, the user will receive a new 'business phone number' that will ring their devices (mobile or desktop).
+							<br><br>
+							The Dialpad Android Application supports awesome features such as: VoIP calling, SMS/MMS (messaging), company directory and contacts management, group calling, and a lot more than I can write in this short paragraph. :)
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="about">
+				<p class="sub-title">
+					<img src="images/hline.png">
+					<span>ABOUT</span>
+					<img src="images/hline.png">
+				</p>
+				<div id="portrait-container">
+					<img src="images/about_portrait.jpg"/>
+				</div>
+				<p id="quote">
+					I build stuff.*<br>
+					<span>(Currently taking suggestions for a better catchphrase)</span>
+				</p>
+				<div id="blurb-container">
+
+					<p id="blurb-major"><span><i>Ideation & Creation</i></span> - the two words summarize my passion in life. I am always fascinated to see a concept that once existed in the abtract world come to life. From the inception of an idea to the actualization of a functional system, I enjoy partaking in the end-to-end process of creating things in the digital world.</p>
+
+					<p id="blurb-one">
+					My main forte is software engineering, with my formal, 4-year degree in Computer Science (EECS) in UC Berkeley, one of the top engineering schools (shameless self promotion). Combined with a sharp eye for design, engineering and art empowers me with a valuable tool to create beautiful code and design.
+					</p>
+
+					<p id="blurb-three">
+					When I'm not working on projects or thinking of crazy ideas to make the next Flappy Bird, I enjoy playing pick up soccer, meeting new friends, making awkward small talk at happy hours, and taking long walks (but not necessarily on the beach). I also enjoy backpacking - take a look at my past <a target="_blank"  href="/travels">TRAVELS!</a>
+					</p>
+
+					<p id="blurb-two">
+					I am currently working as a Mobile Software Engineer at <a target="_blank" href="https://www.dialpad.com/">Dialpad</a>! Professionally, I work with Android platform for Dialpad Application. I do iOS (iPhone) development in my free time.
+
+					<!--For my preferred technology stack, I am quite fond of Java (Spring and Play!) and Javascript (Node.js) for backend, and Angular.js for a frontend framework. When it comes to design, I am well versed in the industry standard Adobe Illustrator and Photoshop to create pixel perfect designs.-->
+					</p>
+					<br style="clear:both;" />
+				</div>
+			</div>
+
+			<div id="contact">
+				<div id="contact-overlay">
+					<p class="sub-title">
+						<img src="images/hlinedark.png">
+						<span>CONTACT</span>
+						<img src="images/hlinedark.png">
+					</p>
+					
+					<div id="contact-blurb-container">
+						<p id="cbcg">Get in touch!</p>
+						<p id="cbcb">I'm always looking for a friend, a project partner, or just anyone to grab a drink!</p>
+					</div>
+
+					<div id="contact-method-container">
+						<div id="email-container">
+							<a>
+								<span>hello</span>
+								<span id="email-at">[at]</span>
+								<span>jinwroh.com</span>
+							</a>
+						</div>
+						<div id="social-button-container">
+							<a target="_blank" href="https://www.facebook.com/rjinwoo">
+								<img src="images/face.png">
+							</a>
+							<a target="_blank" href="https://plus.google.com/u/2/107496977981618673884">
+								<img src="images/gplus.png">
+							</a>
+							<a target="_blank" href="https://www.linkedin.com/pub/jin-w-roh/64/a24/158/">
+								<img src="images/in.png">
+							</a>
+							<a target="_blank" href="https://github.com/jinwroh-public">
+								<img src="images/git.png">
+							</a>
+							<!--
+							<a target="_blank" href="https://twitter.com/jinwroh">
+								<img src="images/twit.png">
+							</a>
+							-->
+						</div>
+						<br style="clear:both;" />
+					</div>
+					<div id="footer">
+						<div></div>
+						<span id="heart" class="heartbeat">Loading...</span>
+						<p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+							Design & Development
+						</p>
+						<p id="misc">
+							Version: 2.5.0<br>
+							Last Updated: June 27, 2016<br>
+						</p>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55450034-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</html>

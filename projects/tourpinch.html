@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Jin W. Roh</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+			<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    	<link rel="stylesheet" type="text/css" href="../stylesheets/projects/tourpinch.css">
+    	<script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    	<script src="../javascripts/projects/tourpinch.js" type="text/javascript"></script>
+	</head>
+	
+
+	<body>
+		<style>
+			#spinner {
+			  margin: 20px auto;
+			  width: 70px;
+			  text-align: center;
+			}
+
+			#spinner > div {
+			  width: 18px;
+			  height: 18px;
+			  background-color: #333;
+
+			  border-radius: 100%;
+			  display: inline-block;
+			  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			  animation: bouncedelay 1.4s infinite ease-in-out;
+			  /* Prevent first frame from flickering when animation starts */
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+
+			#spinner .bounce1 {
+			  -webkit-animation-delay: -0.32s;
+			  animation-delay: -0.32s;
+			}
+
+			#spinner .bounce2 {
+			  -webkit-animation-delay: -0.16s;
+			  animation-delay: -0.16s;
+			}
+
+			@-webkit-keyframes bouncedelay {
+			  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+			  40% { -webkit-transform: scale(1.0) }
+			}
+
+			@keyframes bouncedelay {
+			  0%, 80%, 100% { 
+			    transform: scale(0.0);
+			    -webkit-transform: scale(0.0);
+			  } 40% { 
+			    transform: scale(1.0);
+			    -webkit-transform: scale(1.0);
+			  }
+			}
+		</style>
+		<div id="initial" style="
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			z-index: 500;
+			background-color: white;
+			">
+			<div style="height: 50%;"></div>
+			<div style="
+				position: relative;
+				top: -135px;
+			">
+				<img id="initial-logo" src="../images/logo.svg" style="
+				    margin: auto;
+					display: block;
+					width: 150px;
+				">
+				<div id="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				  <p style="font-family: Lato-Light; color: black;"><p>
+				</div>
+			</div>
+		</div>
+
+		<div id="all-container" style="visibility: hidden;">
+			<div id="navigation-bar">
+				<a href="/">
+					<img id="personal-logo" src="../images/logo.svg" />
+				</a>
+				<nav id="navigation-bar-links" class="cl-effect-13">
+					<a id="homelink" href="/"><span style="
+					    position: relative;
+					    top: -1px;
+					">&lt;</span> Back to Home</a>
+					<a id="projectslink" class="" href="#">Projects</a>
+				</nav>
+				<img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+				<div id="navigation-bar-overlay"></div>
+			</div>
+
+      <!-- SHARED NAV -->
+      <div id="mobile-navigation-bar">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div>Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div>Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div style="font-family: MavenPro-Black; color: black;">TourPinch!</div>
+        </a>
+      </div>
+      <div id="projects-menu">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div>Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div>Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div style="font-family: MavenPro-Black; color: black;">TourPinch!</div>
+        </a>
+      </div>
+      <!-- END SHARED NAV -->
+
+			<div id="main">
+
+				<div>
+					<img id="logo1" src="../images/projects/tourpinch/icon_lightpink.svg">
+					<img id="logo2" src="../images/projects/tourpinch/title3.svg">
+				</div>
+
+				<div id="container">
+
+					<div id="intro">
+						<p id="intro-one">TourPinch! is a web application that provides a pre-selected, best itinerary for a given destination city to tourists depending on their length of stay. The application pinpoints the 'must-see' points and generates the most efficient tour route to help plan the user's travelling. The application is powered by Node.js and Backbone.js in the backend and frontend, respectively. <br><br>Currently, the application is at its concept stage - take a look at the site! <a href="http://www.tourpinch.com" target="_blank">www.tourpinch.com</a> </p>
+
+						<p id="intro-two">I found inspiration for this application during my numerous backpacking trips. Every new arrival at a new destination meant that I would have to research of all the tourist attractions scattered around the city. And since I usually limited my stay to a few days before moving on to a new destination, I could not possibly cover all the tourist attractions I found. I wanted a simple application that would provide the 'best' places to tour in a limit amount of time, with accompanying descriptions.</p>
+						<br style="clear:both;" />
+					</div>
+
+					<div id="one" class="screenshot">
+						<img src="../images/projects/tourpinch/tp11.png" />
+					</div>
+					<p class="caption"><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.--></p>
+
+					<div id="three" class="screenshot">
+						<img src="../images/projects/tourpinch/tp21.png" />
+					</div>
+					<p class="caption"> <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. --></p>
+
+					<div id="four" class="screenshot">
+						<img src="../images/projects/tourpinch/tp31.png" />
+					</div>
+					<p class="caption"><!--Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.--></p>
+
+					<br style="clear: both;"/>
+				</div>
+
+				<div id="footer">
+					<div></div>
+					<span id="heart" class="heartbeat">Loading...</span>
+					<p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+						Design & Development
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

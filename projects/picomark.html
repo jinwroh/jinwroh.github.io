@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Jin W. Roh</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/projects/picomark.css">
+      <script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+      <script src="../javascripts/projects/picomark.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+
+    <style>
+      #spinner {
+        margin: 20px auto;
+        width: 70px;
+        text-align: center;
+      }
+
+      #spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        /* Prevent first frame from flickering when animation starts */
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+
+      #spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+
+      #spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+
+      @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+
+      @keyframes bouncedelay {
+        0%, 80%, 100% { 
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 40% { 
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+      }
+    </style>
+    <div id="initial" style="
+      height: 100%;
+      width: 100%;
+      z-index: 500;
+      background-color: white;
+      position: fixed;
+      ">
+      <div style="height: 50%;"></div>
+      <div style="
+        position: relative;
+        top: -135px;
+      ">
+        <img id="initial-logo" src="../images/logo.svg" style="
+            margin: auto;
+          display: block;
+          width: 150px;
+        ">
+        <div id="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+          <p style="font-family: Lato-Light; color: black;"><p>
+        </div>
+      </div>
+    </div>
+
+    <div id="all-container" style="visibility: hidden;">
+      <!-- SHARED NAV -->
+      <div id="navigation-bar">
+        <a href="/">
+          <img id="personal-logo" src="../images/logo.svg" />
+        </a>
+        <nav id="navigation-bar-links" class="cl-effect-13">
+          <a id="homelink" href="/"><span style="
+              position: relative;
+              top: -1px;
+          ">&lt;</span> Back to Home</a>
+          <a id="projectslink" class="" href="#">Projects</a>
+        </nav>
+        <img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+        <div id="navigation-bar-overlay"></div>
+      </div>
+      <div id="mobile-navigation-bar">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div style="font-family: MavenPro-Black; color: black;">Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div>Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div>TourPinch!</div>
+        </a>
+      </div>
+      <div id="projects-menu">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div style="font-family: MavenPro-Black; color: black;">Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div>Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div>TourPinch!</div>
+        </a>
+      </div>
+      <!-- END SHARED NAV -->
+
+      <div id="main">
+        <div id="logo-container">
+          <img id="logo" src="../images/projects/picomark/logo_circle_navyblue.svg" />
+          <img id="logo-word" src="../images/projects/picomark/pico_word_logo.svg" />
+        </div>
+        <div id="container">
+          <div id="intro">
+            <p id="intro-one">
+              Picomark is a collaboration tool to facilitate communication between freelance designers and their respective clients. 
+
+              Designers can upload and organize their designs to Picomark, and invite clients to share, present, to gather feedback. 
+
+              The application supports rich collaboration features such as real-time drawing, chat and messaging, and commenting tools to pinpoint any necessary details.
+              
+              <br><br>
+
+              The initial idea came from my friend who was working as a freelance designer at that time. He once commented on his annoyance at all the email conversation with his clients with file attachments and confusing feedback discussions. He mentioned that a tool to improve the communication and collaboration aspect would be something he would definitely use - he became (and still is) one of the very first
+              testers for the product.
+            </p>
+
+            <p id="intro-two">
+              At the top-most level, the files are organizes into projects. Each projects can contain multiple files and subdirectories, and every invitees will have access to the entire project (rather than grannular access controls). The designs are mainly image and PDF files, and hopefully support for .psd and .ai files in the future.
+
+              Each uploaded design files can be viewd in a workspace, the core
+              feature of Picomark. The workspace feeatures tools such as drawing, 
+              commenting, and chats where every participants will be notified in real-time.
+              <br><br>
+              This project is still under active development (with daily pushes), with beta version launching very soon. The current alpha version is still rough around the edges with lots of polish left, but the main features have been done. Take a peek at <a href="http://www.picomark.com" target="_blank">www.picomark.com</a>, or look at some of the design and development processes below!
+            </p>
+
+            <br style="clear:both;" />
+          </div>
+
+          <div class="container">
+            <p class="section-title">Landing Page</p>
+            <div class="inner-container">
+              <div class="landing-image-container">
+                <img src="../images/projects/picomark/landing0.jpg">
+                <p class="section-subtitle">Draft 1</p>
+              </div>
+              <div class="landing-image-container">
+                <img src="../images/projects/picomark/landing2.jpg">
+                <p class="section-subtitle">Draft 2</p>
+              </div>
+            </div>
+            <div class="inner-container">
+              <div class="landing-image-container">
+                <img src="../images/projects/picomark/landing3.jpg">
+                <p class="section-subtitle">Final 1</p>
+              </div>
+              <div class="landing-image-container">
+                <img src="../images/projects/picomark/landing4.jpg">
+                <p class="section-subtitle">Final 2</p>
+              </div>
+            </div>
+            <p class="desc">
+              The home page of the of the application needs to communicate the features and functionalities of Picomark without being verbose. It plays an important role since it would be the 'face' of the application, and setting up a great first impression was crucial. I went through different drafts before finalizing on one, and continued to polish and improve on it. After adding in subtle animation effects such as fade-ins and parallax, I thought the page presented a clean and professional look overall.
+            </p>
+          </div>
+
+          <div class="container">
+            <p class="section-title">Main Dashboard</p>
+            <div class="image-container">
+              <img src="../images/projects/picomark/dashboard3.png" />
+              <p class="section-subtitle">Draft 1</p>
+            </div>
+            <div class="image-container">
+              <img src="../images/projects/picomark/dashboard2.png" />
+              <p class="section-subtitle">Draft 2</p>
+            </div>
+            <div class="image-container">
+              <img src="../images/projects/picomark/dashboard1.png" />
+              <p class="section-subtitle">Draft 3</p>
+            </div>
+            <div class="image-container">
+              <img src="../images/projects/picomark/dashboard4.png" />
+              <p class="section-subtitle">Draft 4</p>
+            </div>
+            <p class="desc">
+              The dashboard screen is the displays the user's list of projects. Projects created by the user, as well as any projects to which the user is invited are displayed here. The projects can be displayed in a grid view style with easily dinstinguishable thumbnails, or as a listview with details relevant to the project. New projects can be created at this page.       
+            </p>
+          </div>
+
+          <div class="container">
+            <p class="section-title">Project Structures</p>
+            <div class="image-container">
+              <img src="../images/projects/picomark/project3.png" />
+              <p class="section-subtitle">Draft 1</p>
+            </div>
+            <div class="image-container">
+              <img src="../images/projects/picomark/project4.jpg" />
+              <p class="section-subtitle">Draft 2</p>
+            </div>
+            <p class="desc">
+              Each project can contain any number of files and (sub)folders, closely resembling the computer's file system. Uploading new designs and creating new directories can be done at this page, as well as inviting new members and editing project details. All project related functionalities are handled in this screen. 
+            </p>
+          </div>
+
+          <div class="container">
+            <p class="section-title">Workspace</p>
+            <div class="inline">
+              <div class="workspace-image-container">
+                <img src="../images/projects/picomark/workspace1.png" />
+              </div>
+              <p class="section-subtitle">Draft 1</p>
+            </div>
+            <div class="inline">
+              <div class="workspace-image-container">
+                <img src="../images/projects/picomark/workspace2.png" />
+              </div>
+              <p class="section-subtitle">Draft 2</p>
+            </div>
+            <div class="inline">
+              <div class="workspace-image-container">
+                <img src="../images/projects/picomark/workspace3.png" />
+              </div>
+              <p class="section-subtitle">Draft 3</p>
+            </div>
+            <div class="inline">
+              <div class="workspace-image-container">
+                <img src="../images/projects/picomark/workspace4.jpg" />
+              </div>
+              <p class="section-subtitle">Draft 4</p>
+            </div>
+            <p class="desc">
+              Clicking on individual designs will open up the workspace for that file. I consider the workspace screen the core of Picomark - it features the main tools for collaborating between the two parties: designers and clients. Through the workspace, users can draw and make markings on the designs that update in real time to other participats. Another useful tool is the comment feature, where users can pinpoint the exact place to create an annotation. The workspace also features a group chat and thumbnail overviews.
+            </p>
+          </div>
+
+          <div class="container">
+            <p class="section-title">Bonus: Login Screen</p>
+            <div class="image-container">
+              <img src="../images/projects/picomark/login1.jpg" />
+              <p class="section-subtitle">Draft 1</p>
+            </div>
+            <div class="image-container">
+              <img src="../images/projects/picomark/login2.jpg" />
+              <p class="section-subtitle">Draft 2</p>
+            </div>
+            <p class="desc">
+            </p>
+          </div>
+
+          <br style="clear: both;"/>
+        </div>
+
+        <div id="footer">
+          <div></div>
+          <span id="heart" class="heartbeat">Loading...</span>
+          <p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+            Design & Development
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

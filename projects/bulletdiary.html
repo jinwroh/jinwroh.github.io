@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Jin W. Roh</title>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    	<link rel="stylesheet" type="text/css" href="../stylesheets/projects/bullet.css">
+    	<script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    	<script src="../javascripts/projects/bullet.js" type="text/javascript"></script>
+	</head>
+	
+
+	<body>
+
+		<style>
+			#spinner {
+			  margin: 20px auto;
+			  width: 70px;
+			  text-align: center;
+			}
+
+			#spinner > div {
+			  width: 18px;
+			  height: 18px;
+			  background-color: #333;
+
+			  border-radius: 100%;
+			  display: inline-block;
+			  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			  animation: bouncedelay 1.4s infinite ease-in-out;
+			  /* Prevent first frame from flickering when animation starts */
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+
+			#spinner .bounce1 {
+			  -webkit-animation-delay: -0.32s;
+			  animation-delay: -0.32s;
+			}
+
+			#spinner .bounce2 {
+			  -webkit-animation-delay: -0.16s;
+			  animation-delay: -0.16s;
+			}
+
+			@-webkit-keyframes bouncedelay {
+			  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+			  40% { -webkit-transform: scale(1.0) }
+			}
+
+			@keyframes bouncedelay {
+			  0%, 80%, 100% { 
+			    transform: scale(0.0);
+			    -webkit-transform: scale(0.0);
+			  } 40% { 
+			    transform: scale(1.0);
+			    -webkit-transform: scale(1.0);
+			  }
+			}
+		</style>
+		<div id="initial" style="
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			z-index: 500;
+			background-color: white;
+			">
+			<div style="height: 50%;"></div>
+			<div style="
+				position: relative;
+				top: -135px;
+			">
+				<img id="initial-logo" src="../images/logo.svg" style="
+				    margin: auto;
+					display: block;
+					width: 150px;
+				">
+				<div id="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				  <p style="font-family: Lato-Light; color: black;"><p>
+				</div>
+			</div>
+		</div>
+
+		<div id="all-container" style="visibility: hidden;">
+			<div id="navigation-bar">
+				<a href="/">
+					<img id="personal-logo" src="../images/logo.svg" />
+				</a>
+				<nav id="navigation-bar-links" class="cl-effect-13">
+					<a id="homelink" href="/"><span style="
+					    position: relative;
+					    top: -1px;
+					">&lt;</span> Back to Home</a>
+					<a id="projectslink" class="" href="#">Projects</a>
+				</nav>
+				<img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+				<div id="navigation-bar-overlay"></div>
+			</div>
+
+			<!-- SHARED NAV -->
+			<div id="mobile-navigation-bar">
+				<a href="/projects/bulletdiary.html">
+					<div style="font-family: MavenPro-Black; color: black;">Bullet Diary</div>
+				</a>
+				<a href="/projects/picomark.html">
+					<div>Picomark</div>
+				</a>
+				<a href="/projects/restaurantspin.html">
+					<div>Restaurant Spin</div>
+				</a>
+				<a href="/projects/receiptsnap.html">
+					<div>Receipt Snap</div>
+				</a>
+				<a href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+			</div>
+			<div id="projects-menu">
+				<a href="/projects/bulletdiary.html">
+					<div style="font-family: MavenPro-Black; color: black;">Bullet Diary</div>
+				</a>
+				<a href="/projects/picomark.html">
+					<div>Picomark</div>
+				</a>
+				<a href="/projects/restaurantspin.html">
+					<div>Restaurant Spin</div>
+				</a>
+				<a href="/projects/receiptsnap.html">
+					<div>Receipt Snap</div>
+				</a>
+				<a href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+			</div>
+			<!-- END SHARED NAV -->
+
+
+			<div id="main">
+				<div>
+					<img id="logo" src="../images/projects/bulletdiary/icon2.png">
+				</div>
+				<div id="container">
+					<div id="intro">
+						<p id="intro-one">Bullet Diary is a minimalistic, yet practical journaling iOS mobile application designed to provide a pleasant and effortless experience for writing journal entries. Each entry is composed of up to three bullet points that encapsulate key highlights of the day.
+						<br><br>
+						The three, fun-sized bullet constraint entails the writer to focus on the most meaningful events, rather than logging mundane details of everyday life. Doing so will eliminate the pain of writing lengthy entries, and remove the pressure to devote a significant amount of time. Users are able to review their past entries with ease with three different view modes.
+						</p>
+
+						<p id="intro-two">
+							I have always wanted a simple journaling application without the hassle all the fancy features. I knew that I wouldn't write lengthy entries every day via a mobile medium - I wanted an application that would allow me to recap the most memorable highlights of a day, and to provide a quick overview of my past entries. Though dozens of journaling app exist in the iOS App Store right now, I couldn't find the application that would fit my needs. 
+							<br><br>
+							<span id="appstore-container"> 
+	              <span>
+	              	So I decided to make one myself. 
+	              Take a look at the finished product in the app store, and my processes below!
+	              </span>
+	              <a id="app-link" target="_blank" href="https://itunes.apple.com/us/app/bullet-diary/id923819991">
+	                <img src="../images/iosappstore.svg">
+	              </a>
+	            </span>
+          	</p>
+						<br style="clear:both;" />
+					</div>
+
+					<div id="one" class="">
+						<img src="../images/projects/bulletdiary/1.png">
+						<img src="../images/projects/bulletdiary/3.png">
+						<img src="../images/projects/bulletdiary/2.png">
+					</div>
+					<div id="two" class="">
+						<img src="../images/projects/bulletdiary/5.png">
+						<img src="../images/projects/bulletdiary/4.png">
+						<img src="../images/projects/bulletdiary/6.png">
+					</div>
+					<p class="caption">After inception of the idea, I then had to flesh out the details (fancy term: Systems and Requirements Analysis) and pinpoint the crucial features that would make the app a success. Since I was the direct end user, I had to engage in some soul-searching to find out what I really wanted. I took inspiration from Twitter's model: "small burst of information called Tweets... 140 characters long." I decided that entries would be encapsulated in bullet points, with a fixed character length. I hoped the contraints imposed would reframe the task of writing daily entries from a chore to a quick and fun process.</p>
+
+					<img id="five" src="../images/projects/bulletdiary/7.png">
+					<p class="caption">I created a low fidelity design in my sketchbook, and I opened my favorite tool, Adobe Illustrator to design a high fidelity design and wireframe. I wanted the overall look and feel to be minimalistic, augmented with a 'light and airy' feel to it. I chose white as my main color, with varying degree of opacity and subtle shadows to create a sense of variety and depth. I decided to go with blue as my secondary color. <br><br>I've always loved the <i>Quicksand</i> font and wanted to do a project with it. The round edges and 'clean' feel of Quicksand proved to be an apt choice. I searched for a secondary font that would harmonize well with Quicksand and to provide contrast between the user created text and the application texts. Though I considered a serif font to provide a higher contrast, I opted to go with a sans-serif font, Titillium, to achieve better unity and harmony, while sacrificing the serif contrast.</p>
+
+					<img id="six" src="../images/projects/bulletdiary/8.png">
+					<p class="caption">The next step, <i>Systems Design</i> would parallel the UI/UX design. I feel this is the step where the actual term 'Software Engineering' comes into play. Thankfully, mobile application is smaller in scope when compared to web applications (especially this app) - I mapped out the entire architecture (quite a grandiose term) with relative ease. The design closely follows the textbook definition of MVC (Model-View-Controller) with an added service layer.</p>
+
+					<img id="seven" src="../images/projects/bulletdiary/9.png">
+					<p class="caption">Given that the previous steps are done well, coding is the easiest part of the whole process. The steps are pretty clear when the goals precisely defined. Though there were few parts of the application that were tricky to implement (i.e. infinite scroll for dates), the coding of the application was complete after careful abstraction and deconstruction into managable chunks.</p>
+
+					<img id="seven" src="../images/projects/bulletdiary/10.png">
+					<p class="caption">After testing for considerable amount of time, the application was finally ready for production. I thought submitting the application to the iOS app store and waiting for the review process to complete was the hardest part. After countless days (13 days to be exact) of spamming F5 key to refresh, the status indicator in my app dashboard finally turned to green with the much anticipated status - "Ready for Sale".<br><br></p>
+
+					<br style="clear: both;"/>
+				</div>
+
+				<div id="footer">
+					<div></div>
+					<span id="heart" class="heartbeat">Loading...</span>
+					<p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+						Design & Development
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

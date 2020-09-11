@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Jin W. Roh</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/projects/receiptsnap.css">
+      <script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+      <script src="../javascripts/projects/receiptsnap.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+
+    <style>
+      #spinner {
+        margin: 20px auto;
+        width: 70px;
+        text-align: center;
+      }
+
+      #spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        /* Prevent first frame from flickering when animation starts */
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+
+      #spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+
+      #spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+
+      @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0.0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+
+      @keyframes bouncedelay {
+        0%, 80%, 100% { 
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 40% { 
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+      }
+    </style>
+    <div id="initial" style="
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 500;
+      background-color: white;
+      ">
+      <div style="height: 50%;"></div>
+      <div style="
+        position: relative;
+        top: -135px;
+      ">
+        <img id="initial-logo" src="../images/logo.svg" style="
+            margin: auto;
+          display: block;
+          width: 150px;
+        ">
+        <div id="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+          <p style="font-family: Lato-Light; color: black;"><p>
+        </div>
+      </div>
+    </div>
+
+    <div id="all-container" style="visibility: hidden;">
+      <div id="navigation-bar">
+        <a href="/">
+          <img id="personal-logo" src="../images/logo.svg" />
+        </a>
+        <nav id="navigation-bar-links" class="cl-effect-13">
+          <a id="homelink" href="/"><span style="
+              position: relative;
+              top: -1px;
+          ">&lt;</span> Back to Home</a>
+          <a id="projectslink" class="" href="#">Projects</a>
+        </nav>
+        <img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+        <div id="navigation-bar-overlay"></div>
+      </div>
+
+
+      <!-- SHARED NAV -->
+      <div id="mobile-navigation-bar">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div>Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div style="font-family: MavenPro-Black; color: black;">Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div>TourPinch!</div>
+        </a>
+      </div>
+      <div id="projects-menu">
+        <a href="/projects/bulletdiary.html">
+          <div>Bullet Diary</div>
+        </a>
+        <a href="/projects/picomark.html">
+          <div>Picomark</div>
+        </a>
+        <a href="/projects/restaurantspin.html">
+          <div>Restaurant Spin</div>
+        </a>
+        <a href="/projects/receiptsnap.html">
+          <div style="font-family: MavenPro-Black; color: black;">Receipt Snap</div>
+        </a>
+        <a href="/projects/tourpinch.html">
+          <div>TourPinch!</div>
+        </a>
+      </div>
+      <!-- END SHARED NAV -->
+
+
+      <div id="main">
+        <div id="logo-container">
+          <img id="logo" src="../images/projects/receiptsnap/receiptsnap_logo.png">
+          <img id="logo-word" src="../images/projects/receiptsnap/launchtitle2.png" />
+        </div>
+        <div id="container">
+          <div id="intro">
+            <p id="intro-one">
+              ReceiptSnap is an awesome iPhone application that helps users organize and track receipts by taking pictures and saving them instead of managing physical copies. Users can save the photo of their receipts with relevant tags and details to help categorize and identify for later use. Furthermore, the app can also generate reports that summarize their spendings from a specified timeframe.
+              <br><br>
+              It has always been an habit of mine to keep any receipts that result from credit card transactions, lest the merchant charge incorrect amounts. I've actually had to dispuate transactions 5 times so far, with significant amounts (maybe I'm just unlucky?), and digging through the receipts was extrmeley painful.
+            </p>
+
+            <p id="intro-two">
+              <span>
+              Of course, taking pictures of receipts is not a novel idea - there are already plenty of existing apps in the iOS app store. However, I decided to make one for myself, mostly to keep up-to-date with the latest technologies. This iOS application was written in Apple's 'new' language, Swift (2.0), and used several new and cutting-edge technologies such as Realm.io (a schemaless database) and RxSwift (functional paradigm in Swift). I also learned a new design tool, Sketch, to create prototypes and final designs.
+              </span>
+              <br /><br />
+              <span id="appstore-container"> 
+                <span>
+                Take a look at the finished product in the app store, and my detailed thought processes below!
+                </span>
+                <a id="app-link" target="_blank" href="https://itunes.apple.com/us/app/receipt-snap-easy-receipt/id1107907335">
+                  <img src="../images/iosappstore.svg">
+                </a>
+              </span>
+            </p>
+            <br style="clear:both;" />
+          </div>
+
+          <div class="tri">
+            <span>Receipt List</span>
+            <img src="../images/projects/receiptsnap/rs1.png">
+            <img src="../images/projects/receiptsnap/rs10.png">
+            <img src="../images/projects/receiptsnap/rs6.png">
+            <p>
+              The application can be divided into three major sections: receipts, reports, and settings. The receipts are organized in lists, in order of their date taken. The list is grouped by week or month - customizable in settings. Each row displays the receipt thumbnail and the price, as well as any other details that the user recorded (e.g. tags, title, and date). The rows also conforms to the expected iOS ux: swiping a row to the left will allow quick editing or deletion.<br><br>
+              I thought it would be a great idea to present a custom 'empty receipts list view' that informs the user to take pictures of receipts via the camera icon on the top right. Compared to an empty list or a white background, a custom 'empty state' would reduce any possible confusion and directs the user to action at the time of startup after installing the app for the first time. I believe these small details improves the overall user experience of any application.
+            </p>
+          </div>
+
+          <div class="tri">
+            <span>Viewing and Saving Receipts</span>
+            <img src="../images/projects/receiptsnap/rs11.png">
+            <img src="../images/projects/receiptsnap/rs3.png">
+            <img src="../images/projects/receiptsnap/rs2.png">
+            <p>
+              Users can save their receipts by either taking a picture with their camera, or selecting a pre-existing photo from their photo library. When selecting an option, their most recent pictures from their photo library are conveniently displayed for easy selection. After a picture has been selected, the user can tag relevant details such as price and categories for later use in the proceeding edit view.<br><br>
+              Each individual receipts can be viewed in a separate screen. Swiping left or right will navigate to the next receipt, if there are any. The recorded details of the receipts are displayed, but tapping on the picture will show only the picture in an 'isolated' mode. 
+            </p>
+          </div>
+
+          <div class="dual">
+            <span>Reports</span>
+            <img src="../images/projects/receiptsnap/rs4.png">
+            <img src="../images/projects/receiptsnap/rs5.png">
+            <p>
+              I decided a reports section would be useful to aggregate and analyze receipts from a specified timeframe. The reports section gives a nice overview of the data to be easily viewed in a single screen. The reports section features a quick overview of all the receipts included in the timeframe, charts that visualize data (such as the distribution of categories), and other useful information. Unfortunately, for this first version (v1.0), there are no options to export the reports just yet.
+            </p>
+          </div>
+
+          <div class="dual">
+            <span>Settings</span>
+            <img src="../images/projects/receiptsnap/rs7.png">
+            <img src="../images/projects/receiptsnap/rs8.png">
+            <p>
+              The settings page is the final section of this ReceiptSnap application. One of the configurable options is to start the camera every tkme the application loads. I think it is a convienent feature and an definite use case. The currency symbol can be configured to match the user's locale.<br><br>
+              I realize the functionality of ReceiptSnap can be considered 'barebones' when compared to other receipt tracking applications in the wild. However, at least for version 1.0, I think it's a great start and have great potential to expand further in the future. As I wrote in the intro, the purpose of this developing this application was to learn new technology and hone my design skills - I can confidently say I have reached my objective in doing so.
+            </p>
+          </div>
+
+        </div>
+
+        <div id="footer">
+          <div></div>
+          <span id="heart" class="heartbeat">Loading...</span>
+          <p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+            Design & Development
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

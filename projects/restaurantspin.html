@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Jin W. Roh</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+			<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    	<link rel="stylesheet" type="text/css" href="../stylesheets/projects/restaurantspin.css">
+    	<script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    	<script src="../javascripts/projects/restaurantspin.js" type="text/javascript"></script>
+	</head>
+	
+
+	<body>
+		<style>
+			#spinner {
+			  margin: 20px auto;
+			  width: 70px;
+			  text-align: center;
+			}
+
+			#spinner > div {
+			  width: 18px;
+			  height: 18px;
+			  background-color: #333;
+
+			  border-radius: 100%;
+			  display: inline-block;
+			  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			  animation: bouncedelay 1.4s infinite ease-in-out;
+			  /* Prevent first frame from flickering when animation starts */
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+
+			#spinner .bounce1 {
+			  -webkit-animation-delay: -0.32s;
+			  animation-delay: -0.32s;
+			}
+
+			#spinner .bounce2 {
+			  -webkit-animation-delay: -0.16s;
+			  animation-delay: -0.16s;
+			}
+
+			@-webkit-keyframes bouncedelay {
+			  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+			  40% { -webkit-transform: scale(1.0) }
+			}
+
+			@keyframes bouncedelay {
+			  0%, 80%, 100% { 
+			    transform: scale(0.0);
+			    -webkit-transform: scale(0.0);
+			  } 40% { 
+			    transform: scale(1.0);
+			    -webkit-transform: scale(1.0);
+			  }
+			}
+		</style>
+		<div id="initial" style="
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			z-index: 500;
+			background-color: white;
+			">
+			<div style="height: 50%;"></div>
+			<div style="
+				position: relative;
+				top: -135px;
+			">
+				<img id="initial-logo" src="../images/logo.svg" style="
+				    margin: auto;
+					display: block;
+					width: 150px;
+				">
+				<div id="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				  <p style="font-family: Lato-Light; color: black;"><p>
+				</div>
+			</div>
+		</div>
+
+		<div id="all-container" style="visibility: hidden;">
+			<div id="navigation-bar">
+				<a href="/">
+					<img id="personal-logo" src="../images/logo.svg" />
+				</a>
+				<nav id="navigation-bar-links" class="cl-effect-13">
+					<a id="homelink" href="/"><span style="
+					    position: relative;
+					    top: -1px;
+					">&lt;</span> Back to Home</a>
+					<a id="projectslink" class="" href="#">Projects</a>
+				</nav>
+				<img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+				<div id="navigation-bar-overlay"></div>
+			</div>
+
+			<!-- SHARED NAV -->
+			<div id="mobile-navigation-bar">
+				<a href="/projects/bulletdiary.html">
+					<div>Bullet Diary</div>
+				</a>
+				<a href="/projects/picomark.html">
+					<div>Picomark</div>
+				</a>
+				<a href="/projects/restaurantspin.html">
+					<div style="font-family: MavenPro-Black; color: black;">Restaurant Spin</div>
+				</a>
+				<a href="/projects/receiptsnap.html">
+					<div>Receipt Snap</div>
+				</a>
+				<a href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+			</div>
+			<div id="projects-menu">
+				<a href="/projects/bulletdiary.html">
+					<div>Bullet Diary</div>
+				</a>
+				<a href="/projects/picomark.html">
+					<div>Picomark</div>
+				</a>
+				<a href="/projects/restaurantspin.html">
+					<div style="font-family: MavenPro-Black; color: black;">Restaurant Spin</div>
+				</a>
+				<a href="/projects/receiptsnap.html">
+					<div>Receipt Snap</div>
+				</a>
+				<a href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+			</div>
+			<!-- END SHARED NAV -->
+
+			<div id="main">
+				<div>
+					<img id="logo" src="../images/projects/restaurantspin/RestaurantSpinRedLogo.svg">
+				</div>
+				<div id="container">
+					<div id="intro">
+						<p id="intro-one">
+							Restaurant Spin a nifty iPhone application to help users find new restaurants and revisit old favorites. The application randomly suggests a nearby place to eat according to the filters set by the user. The results are searched using the Yelp and Google Places Search API. Filters include price range, average customer rating, search radius, and more!
+							<br><br>
+							I always found it annoying when it came to deciding on a place to eat with friends and colleagues. No one would have a definite suggestion, and finding new places wasn't easy.
+						</p>
+
+						<p id="intro-two">
+							<span>
+							After searching through the app store for an app that suggests a randomly selected restaurant, I was surprised to find that there weren't any decent ones. I immediately thought a random restaurant generator that curates search results from Yelp would be a great idea for a side project that I would utilize myself.
+							</span>
+							<br /><br />
+							<span id="appstore-container"> 
+                <span>
+                Take a look at the finished product in the app store, and my detailed thought processes below!
+                </span>
+                <a id="app-link" target="_blank" href="https://itunes.apple.com/us/app/restaurant-spin-random-restaurant/id1028963529">
+                  <img src="../images/iosappstore.svg">
+                </a>
+              </span>
+						</p>
+
+						<br style="clear:both;" />
+ 											
+					</div>
+
+					<div id="one" class="dual">
+						<span>Main Map View</span>
+						<img src="../images/projects/restaurantspin/rspin1.png">
+						<img src="../images/projects/restaurantspin/rest22.png">
+						<p id="p1">
+							The main view initially displays the map where the user can set his initial location. The "LET'S SPIN" icon is fixed in the center, but the map is draggable and zoomable. The UI/UX is very similar to that of Uber. I thought Uber's mobile app interface to set the current location by moving and panning the map with a fixed center as the selected coordiates was intuitive, so I decided to follow its footsteps.<br><br>
+							Moving the map updates the address on the bottom bar, and clickcing on the center icon will initiate the random restaurant selection process. The bottom bar displays the current filters set for Restaraunt selection, and clicking on the bottom bar will take the user to a different screen to toggle and customize filters.<br><br>
+						</p>
+					</div>
+
+					<div id="" class="dual">
+						<span>Customizable Filters</span>
+						<img src="../images/projects/restaurantspin/rspin2.png">
+						<img src="../images/projects/restaurantspin/rest33.png">
+						<img src="../images/projects/restaurantspin/rest44.png">
+						<p>
+							Even though the application's concept is a 'Random Restaurant Generator', I thought the suggestions shouldn't be completely random without any variables. I decided to add filters such as distance, rating and price ranges, keywords, etc. The filters allow users to narrow down the expected search results and discover restaurants according to their taste.<br><br>
+							The Restaurant searches and reviews can be selected from Yelp or Google Places APIs. I initially thought of only using Yelp, but including Google Places allowed me to incorporate a greater search range. Unfortunately, only one of the search APIs can be selected at once - it was against their terms of service to combine results from different review providers.
+						</p>
+					</div>
+			
+					<div class="dual">
+						<span>Restaurant Suggestions</span>
+						<img src="../images/projects/restaurantspin/rspin3.png">
+						<img src="../images/projects/restaurantspin/rspin4.png">
+						<p>
+							When the "LET'S SPIN" button is tapped, the app displays a suggestion on the map after a brief searching delay. The initial user's selected location is displayed as a red, 'uncooked' steak, and the destination restaurant is a brown 'cooked' steak. 
+							The steak idea was originally presented by my graphic designer friend, and I thought it was a cute idea to incorporate into the app; I asked him to do those icons. <br><br>
+							The details of the selected restaurant is displayed at the bottom of the screen. It shows the name and rating of the restaurant, and any other relevant details. Tapping on it will navigate the user to the restaurant's Yelp or Google page, depending on the selected search engine set in the filters page. <br><br>
+							Tapping on the refresh icon on the right will generate a new random suggestion, and the back icon will take the user back to the main map view. I didn't add a history feature on purpose, so there is no 'go back to previously suggested restaurant' functionality. I wanted to make RestaurantSpin app as 'light' and simple as possible, and did not want unnecessary functions to bloat the app, and thought the user experience would be suboptimal.
+						</p>
+					</div>
+
+					<div class="dual">
+						<span>Miscellaneous / Details</span>
+						<img src="../images/projects/restaurantspin/rspin5.png">
+						<img src="../images/projects/restaurantspin/rspin6.png">
+						<p>
+							I chose red as the main color theme of RestaurantSpin, and an octopus with utensils as the logo. For the version 1.0.0 relase of this app, I added ads (iAds); I was very curious if the app would at least make some pocket change. It ended up making a grand total of $10.68, before the iAd network (ad providing service by Apple) was discontinued. Though I made a negligible amount of money, I didn't mind at all since the goal wasn't to make a profit. <br><br>
+							I was happy to find out that this application helped some users, judging by the reviews on the app store. It was a fun project to create something that I wanted to use, and I really enjoyed (still do) creating side projects of my own.
+						</p>
+					</div>
+				</div>
+				<div id="footer">
+					<div></div>
+					<span id="heart" class="heartbeat">Loading...</span>
+					<p id="rjwmark">&copy; 2016 Jin W. Roh <br />
+						Design & Development
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

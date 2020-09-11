@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Jin W. Roh</title>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    	<link rel="stylesheet" type="text/css" href="../stylesheets/projects/spartan.css">
+    	<script src="../javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    	<script src="../javascripts/projects/spartan.js" type="text/javascript"></script>
+	</head>
+	
+
+	<body style="overflow-x: hidden; overflow-y: hidden;">
+
+		<style>
+			#spinner {
+			  margin: 20px auto;
+			  width: 70px;
+			  text-align: center;
+			}
+
+			#spinner > div {
+			  width: 18px;
+			  height: 18px;
+			  background-color: #333;
+
+			  border-radius: 100%;
+			  display: inline-block;
+			  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+			  animation: bouncedelay 1.4s infinite ease-in-out;
+			  /* Prevent first frame from flickering when animation starts */
+			  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+			}
+
+			#spinner .bounce1 {
+			  -webkit-animation-delay: -0.32s;
+			  animation-delay: -0.32s;
+			}
+
+			#spinner .bounce2 {
+			  -webkit-animation-delay: -0.16s;
+			  animation-delay: -0.16s;
+			}
+
+			@-webkit-keyframes bouncedelay {
+			  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+			  40% { -webkit-transform: scale(1.0) }
+			}
+
+			@keyframes bouncedelay {
+			  0%, 80%, 100% { 
+			    transform: scale(0.0);
+			    -webkit-transform: scale(0.0);
+			  } 40% { 
+			    transform: scale(1.0);
+			    -webkit-transform: scale(1.0);
+			  }
+			}
+		</style>
+		<div id="initial" style="
+			height: 100%;
+			position: relative;
+			z-index: 500;
+			background-color: white;
+			">
+			<div style="height: 50%;"></div>
+			<div style="
+				position: relative;
+				top: -135px;
+			">
+				<img id="initial-logo" src="../images/logo.svg" style="
+				    margin: auto;
+					display: block;
+					width: 150px;
+				">
+				<div id="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				  <p style="font-family: Lato-Light; color: black;"><p>
+				</div>
+			</div>
+		</div>
+
+		<div id="all-container" style="visibility: hidden;">
+			<div id="navigation-bar">
+				<a href="/">
+					<img id="personal-logo" src="../images/logo.svg" />
+				</a>
+				<nav id="navigation-bar-links" class="cl-effect-13">
+					<a id="homelink" href="/"><span style="
+					    position: relative;
+					    top: -1px;
+					">&lt;</span> Back to Home</a>
+					<a id="projectslink" class="" href="#">Projects</a>
+				</nav>
+				<img id="navigation-bar-links-mobile" src="../images/mobile-menu.svg">
+				<div id="navigation-bar-overlay"></div>
+			</div>
+			<div id="mobile-navigation-bar">
+				<a id="link1" href="/projects/bulletdiary.html">
+					<div>Bullet Diary</div>
+				</a>
+				<a id="link2" href="/projects/restaurantspin.html">
+					<div>Restaurant Spin</div>
+				</a>
+				<a id="link3" href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+				<a id="link4" href="/projects/emporie.html">
+					<div>Emporie</div>
+				</a>
+				<a id="link5" href="/projects/dqf.html">
+					<div>DQF: Dynamic Quality Evaluation</div>
+				</a>
+				<a id="link6" href="/projects/spartan.html">
+					<div style="font-family: MavenPro-Black; color: black;">Spartan Software Website</div>
+				</a>
+			</div>
+			<div id="projects-menu">
+				<a href="/projects/bulletdiary.html">
+					<div>Bullet Diary</div>
+				</a>
+				<a href="/projects/restaurantspin.html">
+					<div>Restaurant Spin</div>
+				</a>
+				<a href="/projects/tourpinch.html">
+					<div>TourPinch!</div>
+				</a>
+				<a href="/projects/emporie.html">
+					<div>Emporie</div>
+				</a>
+				<a href="/projects/dqf.html">
+					<div>DQF: Dynamic Quality Evaluation</div>
+				</a>
+				<a href="/projects/spartan.html">
+					<div style="font-family: MavenPro-Black; color: black;">Spartan Software Website</div>
+				</a>
+			</div>
+
+			<div id="main">
+
+				<p class="sub-title">
+					<img src="../images/hlinedark.png">
+					<span>SPARTAN SOFTWARE WEBSITE</span>
+					<img src="../images/hlinedark.png">
+				</p>
+
+				<div id="container">
+
+					<div id="intro">
+						<p id="intro-one">While working at Spartan Software, one of the first projects to which I was assigned  was to develop the company website. I worked with the designer, Matt Presta, to develop a professional and fully responsive, mobile-friendly site. Since I already had experience with Bootstrap framework (Twitter), I opted to use the Foundation framework (Zurb) and SCSS to learn more of the ever changing front-end technology.</p>
+
+						<p id="intro-two">It was fun challenge learning new frameworks and technology. Collaborating with Matt was a great experience, which allowed me to learn more from other people's work and further develop my own set of skills.<br><br>Check out the live site here! <a href="http://spartansoftwareinc.com" target="_blank">www.spartansoftwareinc.com</a></p>
+						<br style="clear:both;" />
+					</div>
+
+					<div id="one" class="screenshot">
+						<img src="../images/projects/spartan/sp1.jpg" />
+					</div>
+
+					<div id="three" class="screenshot">
+						<img src="../images/projects/spartan/sp2.jpg" />
+					</div>
+
+					<div id="mobile-container">
+						<div id="four" class="screenshot">
+							<img src="../images/projects/spartan/sp3.jpg" />
+						</div>
+
+						<div id="five" class="screenshot">
+							<img src="../images/projects/spartan/sp4.jpg" />
+						</div>
+					</div>
+
+					<br style="clear: both;"/>
+				</div>
+
+				<div id="footer">
+					<div></div>
+					<span id="heart" class="heartbeat">Loading...</span>
+					<p id="rjwmark">&copy; 2015 Jin W. Roh <br />
+						Design & Development
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
