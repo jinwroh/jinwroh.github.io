@@ -804,6 +804,7 @@
     background-color: rgb(243, 243, 255);
     overflow: hidden;
     z-index: 50;
+    display: none;
   }
 
   #prof-android-container {
